@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/curExchange/static/css/main.7c921ae2.css",
-    "main.js": "/curExchange/static/js/main.a7e63626.js",
+    "main.js": "/curExchange/static/js/main.9798c2e1.js",
     "index.html": "/curExchange/index.html",
     "main.7c921ae2.css.map": "/curExchange/static/css/main.7c921ae2.css.map",
-    "main.a7e63626.js.map": "/curExchange/static/js/main.a7e63626.js.map"
+    "main.9798c2e1.js.map": "/curExchange/static/js/main.9798c2e1.js.map"
   },
   "entrypoints": [
     "static/css/main.7c921ae2.css",
-    "static/js/main.a7e63626.js"
+    "static/js/main.9798c2e1.js"
   ]
 }
