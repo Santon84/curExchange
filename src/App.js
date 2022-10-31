@@ -76,15 +76,13 @@ React.useEffect(() => {
   //   }
   // }, [toCurrency])
 
-  const onToCurrencyChange = (cur) => {
-      setToCurrency(cur);
+  // const onToCurrencyChange = (cur) => {
+  //     setToCurrency(cur);
     
-      const currencyValue = fromPrice / rates[fromCurrency],
-      total = currencyValue * rates[cur]
-      setToPrice(total.toFixed(3));
-    
-    
-  }
+  //     const currencyValue = fromPrice / rates[fromCurrency],
+  //     total = currencyValue * rates[cur]
+  //     setToPrice(total.toFixed(3));
+  // }
 
   
   return (
