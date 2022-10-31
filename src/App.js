@@ -5,8 +5,8 @@ import './index.scss';
 function App() {
 
   const [rates, setRates] = React.useState({}),
-        [fromCurrency, setFromCurrency] = React.useState('RUB'),
-        [toCurrency, setToCurrency] = React.useState('USD'),
+        [fromCurrency, setFromCurrency] = React.useState('USD'),
+        [toCurrency, setToCurrency] = React.useState('RUB'),
         [fromPrice, setFromPrice] = React.useState(1),
         [toPrice, setToPrice] = React.useState(0),
         [lastEdited, setLastEdited] = React.useState(0);
@@ -17,6 +17,7 @@ React.useEffect(() => {
 	.then(res => res.json())
 	.then(json => {
 	setRates(json.rates);
+  //onChangeFromValue(1);
   console.log(json.rates)
 	})
 	.catch(err => {
@@ -39,12 +40,13 @@ React.useEffect(() => {
 
   
   const onChangeFromValue = value => {
-
+    
     setFromPrice(value)
     setLastEdited(0);
     const currencyValue = value / rates[fromCurrency],
     total = currencyValue * rates[toCurrency]
-    setToPrice(total.toFixed(3));
+    
+    setToPrice(isNaN(total) ? 0 : total.toFixed(3));
     
 
   }
@@ -58,23 +60,18 @@ React.useEffect(() => {
     setFromPrice(total.toFixed(3));
   }
 
-  
+
 
   React.useEffect(() =>  {
     if (lastEdited===0) {
+      //console.log(fromPrice +' fromPrice')
     onChangeFromValue(fromPrice);
     } else {
     onChangeToValue(toPrice); 
     }
-  }, [fromCurrency])
+  }, [fromCurrency, toCurrency, rates])
   
-  React.useEffect(() =>  {
-    if (lastEdited===0) {
-      onChangeFromValue(fromPrice);
-      } else {
-      onChangeToValue(toPrice); 
-    }
-  }, [toCurrency])
+  
 
   // const onToCurrencyChange = (cur) => {
   //     setToCurrency(cur);
