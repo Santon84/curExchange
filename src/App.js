@@ -60,13 +60,13 @@ React.useEffect(() => {
 
   
 
-  // React.useEffect(() =>  {
-  //   if (lastEdited===0) {
-  //   onChangeFromValue(fromPrice);
-  //   } else {
-  //   onChangeToValue(toPrice); 
-  //   }
-  // }, [fromCurrency,toCurrency])
+  React.useEffect(() =>  {
+    if (lastEdited===0) {
+    onChangeFromValue(fromPrice);
+    } else {
+    onChangeToValue(toPrice); 
+    }
+  }, [fromCurrency, toCurrency])
   
   // React.useEffect(() =>  {
   //   if (lastEdited===0) {
