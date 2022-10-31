@@ -7,7 +7,7 @@ function App() {
   const [rates, setRates] = React.useState({}),
         [fromCurrency, setFromCurrency] = React.useState('RUB'),
         [toCurrency, setToCurrency] = React.useState('USD'),
-        [fromPrice, setFromPrice] = React.useState(0),
+        [fromPrice, setFromPrice] = React.useState(1),
         [toPrice, setToPrice] = React.useState(0),
         [lastEdited, setLastEdited] = React.useState(0);
 
