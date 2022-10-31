@@ -50,9 +50,9 @@ React.useEffect(() => {
   }
   const onChangeToValue = value => {
 
-    setLastEdited(1);
-    setToPrice(value)
     
+    setToPrice(value);
+    setLastEdited(1);
     const currencyValue = value / rates[toCurrency],
     total = (currencyValue * rates[fromCurrency])
     setFromPrice(total.toFixed(3));
