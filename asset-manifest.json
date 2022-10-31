@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Santon84/curExchange/static/css/main.7c921ae2.css",
+    "main.js": "/Santon84/curExchange/static/js/main.bc5ccaf3.js",
+    "index.html": "/Santon84/curExchange/index.html",
+    "main.7c921ae2.css.map": "/Santon84/curExchange/static/css/main.7c921ae2.css.map",
+    "main.bc5ccaf3.js.map": "/Santon84/curExchange/static/js/main.bc5ccaf3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7c921ae2.css",
+    "static/js/main.bc5ccaf3.js"
+  ]
+}
